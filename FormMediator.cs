@@ -28,6 +28,7 @@ namespace EscolhaProfissao
             DisableAll();
         }
 
+
         public void Notify(Control sender)
         {
             if (sender == txtNome || sender == txtSobrenome)
