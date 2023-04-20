@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,12 +11,17 @@ using System.Windows.Forms;
 
 namespace EscolhaProfissao
 {
+    
     public partial class Form1 : Form
     {
+        //Criando um objeto mediator
         private FormMediator mediator;
+       
         public Form1()
         {
             InitializeComponent();
+            // passando as caixas de texto, as caixas de seleção e o botão de envio como parâmetros
+            // para o construtor do objeto mediator
             mediator = new FormMediator(txtNome, txtSobrenome, txtNomeCompleto, cboxCurso, cboxProfDesejada, btnSubmit);
         }
 
